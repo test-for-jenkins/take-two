@@ -10,7 +10,7 @@ pipeline {
         sh 'echo $USER'
         sh 'node --version'
         sh 'npm config set cache /tmp'
-        sh 'EXPORT HOME=/tmp; sudo npm install'
+        sh 'EXPORT HOME=/tmp; npm --prefix install'
         /* sh './node_modules/.bin/jest' */
       }
     }
