@@ -8,6 +8,7 @@ pipeline {
   stages {
     stage('Test') {
       steps {
+        sh 'echo $USER'
         sh 'npm install'
         sh './node_modules/.bin/jest'
       }
