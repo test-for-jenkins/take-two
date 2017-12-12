@@ -7,7 +7,7 @@ pipeline {
   }
   stages {
     stage('Test') {
-      steps {
+      withDockerContainer(args: '-u root') {
         sh 'echo $USER'
         sh 'npm install'
         sh './node_modules/.bin/jest'
