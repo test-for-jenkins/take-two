@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:latest'
+      image 'mhart/alpine-node:8'
     }
   }
   stages {
@@ -9,9 +9,10 @@ pipeline {
       steps {
         sh 'echo $USER'
         sh 'node --version'
-        sh 'npm config set cache /tmp'
-        sh 'EXPORT HOME=/tmp; npm --prefix install'
-        /* sh './node_modules/.bin/jest' */
+        sh 'npm install'
+        /* sh 'npm config set cache /tmp' */
+        /* sh 'EXPORT HOME=/tmp; npm --prefix install' */
+        sh './node_modules/.bin/jest'
       }
     }
   }
