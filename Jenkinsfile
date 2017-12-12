@@ -9,7 +9,7 @@ pipeline {
       steps {
         sh 'echo $USER'
         sh 'node --version'
-        /* sh 'npm install' */
+        sh 'npm install'
         /* sh './node_modules/.bin/jest' */
       }
     }
