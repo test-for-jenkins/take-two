@@ -1,0 +1,11 @@
+{
+  "name": "take-two",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:test-for-jenkins/take-two.git",
+  "author": "Riza Fahmi <rizafahmi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^21.2.1"
+  }
+}
